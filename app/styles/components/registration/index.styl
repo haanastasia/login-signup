@@ -1,0 +1,56 @@
+.registration
+    font-family 'Work Sans', sans-serif
+    
+    &-header
+        position relative
+        width 138px
+        background-color #5A61ED
+
+        &__title
+            transform rotate(180deg)
+            position absolute
+            bottom 22px
+            right 5.7px
+            -webkit-writing-mode vertical-rl
+            writing-mode tb-rl
+            color #FFFFFF
+
+
+    &__content
+        width calc(100% - 138px)
+        padding 39px 22px 33px 21px
+        position relative
+        z-index 1
+        background-color white
+
+        &:after 
+            content url(../images/user.svg)
+            position absolute
+            z-index -1
+            bottom 0px
+            right 0px
+
+
+    &__wrapper
+        display flex
+        flex-direction row
+        flex-wrap wrap
+        justify-content space-between
+        align-items stretch
+        align-content stretch
+        min-height 481px
+
+    &__text
+        font-weight 300
+        font-size 14px
+        line-height 16px
+        color #111111
+
+    &__descr
+        margin 0px 0px 20px
+
+    &__auth-link
+        font-weight 300
+        font-size 13px
+        line-height 15px
+        color #000000

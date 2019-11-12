@@ -1,6 +1,72 @@
 extends /blocks/layout-default/layout-default
 
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'Sign up';
 
 block content
+	.page__content.page__content--middle
+		.registration
+			.registration__wrapper
+				.registration__header.registration-header
+					h1.title.registration-header__title
+						| Sign up
+				.registration__content
+					.registration__descr
+						.subtitle.registration__subtitle
+							| New user?
+						.registration__text
+							| Use the form below to create your account.
+					form.registration__form.form(method="POST")
+						.form__line
+							.form__col
+								.form__field
+									.form__
+										label.form__label(for="first_name")
+											| First Name
+									input.form__control(type="text" id="first_name" value="Alice" required)
+							.form__col
+								.form__field
+									label.form__label(for="last_name")
+										| Last Name
+									input.form__control(type="text" id="last_name" value="Miller" required)
+						.form__line
+							.form__col
+								.form__field
+									label.form__label(for="nationality")
+										| Nationality
+									input.form__control(type="text" id="nationality" required)
+							.form__col
+								.form__field
+									label.form__label(for="mail")
+										| E-mail
+									input.form__control(type="email" id="mail" required)
+						.form__line
+							.form__col
+								.form__field
+									label.form__label(for="birthday")
+										| Date of Birth
+									input.form__control(type="text" id="birthday" required)
+							.form__col
+								.form__field
+									label.form__label
+										| Gender
+									input.form__control(type="text" id="gender" required)
+						.form__line
+							.form__col
+								.form__field
+									label.form__label(for="password")
+										| Password
+									input.form__control(type="password" id="password" required)			
+							.form__col
+								.form__field
+									label.form__label(for="password_confirm")
+										| Confirm Password
+									input.form__control(type="password" id="password_confirm" required)		
+						.form__line.form__line--bottom
+							.registration__auth-link
+								| Have an account? 
+								a(href='#') Login
+							.form__submit
+								button.button.button_type_submit.button_size_l.button_view_classic(type="submit") 
+									| Complete Signup
+								
