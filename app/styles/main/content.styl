@@ -3,14 +3,18 @@
 
     &__content
         margin 60px auto
-        box-shadow 0px 12px 82px rgba(0, 0, 0, 0.2)
+        border-top 1px solid #e4e5eb
+        border-bottom 1px solid #e4e5eb
 
         &--middle
             width 665px
             
 a 
     color #5A61ED
-    font-weight 400
+    font-weight 500
+
+    &:hover 
+        text-decoration none
 
 .button
     font-family 'PT Sans', sans-serif
@@ -26,3 +30,77 @@ a
         &_classic
             background #5A61ED
             color #FFFFFF
+
+.select-outer
+    position relative
+    
+    &:after
+        content url(../images/nav.svg)
+        position absolute
+        top 0px
+        right 0px
+        width 8px
+        height 100%
+
+.radio
+    cursor: pointer;
+
+    &-group 
+        flex(row, nowrap, flex-start, center, center)
+        padding 4.6px 0px 6.3px
+
+    &__text
+        font-size 14px
+        line-height 16px
+        color #111111
+
+    &_type
+        &_line
+            flex(row, nowrap, flex-start, center, center)
+            margin-right 19px
+
+            &:last-child
+                margin-right 0px
+
+    &__control 
+        position absolute
+        z-index -1
+        margin 0
+        opacity 0
+
+        &:checked + span 
+            background #5A61ED
+
+        & + span
+            position absolute
+            border-radius 6.3px
+            width 6px
+            height 6px
+            margin auto
+            top 0px
+            left 0px
+            right 0px
+            bottom 0px
+
+    &__box 
+        width 12px
+        height 12px
+        position relative
+        display inline-block
+        border 0.7px solid #5A61ED
+        box-sizing border-box
+        border-radius 6.3px    
+        margin-right 6px
+
+
+.birthday
+    flex(row, nowrap, space-between, center, center)
+
+    &__day
+        width 56px
+
+    &__month
+        width 91px
+    
+    &__year        
+        width 68px

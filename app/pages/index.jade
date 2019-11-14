@@ -34,23 +34,78 @@ block content
 								.form__field
 									label.form__label(for="nationality")
 										| Nationality
-									input.form__control(type="text" id="nationality" required)
+									.select-outer
+										select.form__select(id="nationality" required)
+											option
+												| American
+											option
+												| Russian
+											option
+												| Deutsch
 							.form__col
 								.form__field
 									label.form__label(for="mail")
 										| E-mail
-									input.form__control(type="email" id="mail" required)
+									input.form__control(type="email" id="mail" value="alice.miller@yahoo.com" required)
 						.form__line
 							.form__col
 								.form__field
 									label.form__label(for="birthday")
 										| Date of Birth
-									input.form__control(type="text" id="birthday" required)
+									.control-group.control-group__birthday.birthday
+										span.birthday__day.select-outer
+											- var n = 1;
+											select.form__select(name="birthday-day")
+												while n < 31
+													option= n++
+										span.birthday__month.select-outer
+											select.form__select(name="birthday-month")
+												option
+													| January
+												option
+													| February
+												option
+													| March
+												option
+													| April
+												option
+													| May
+												option
+													| June
+												option
+													| July
+												option
+													| August
+												option
+													| September
+												option
+													| October
+												option
+													| November
+												option
+													| December								
+										span.birthday__year.select-outer
+											- var n = 1960;
+											select.form__select(name="birthday-year")
+												while n < 2003
+													option= n++
 							.form__col
 								.form__field
 									label.form__label
 										| Gender
-									input.form__control(type="text" id="gender" required)
+									.radio-group
+										label.radio.radio_type_line
+											span.radio__box
+												input.radio__control(type="radio" name="gender")
+												span
+											span.radio__text
+												| Male
+										label.radio.radio_type_line
+											span.radio__box
+												input.radio__control(type="radio" name="gender" checked="checked")
+												span
+											span.radio__text
+												| Female
 						.form__line
 							.form__col
 								.form__field
